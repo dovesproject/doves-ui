@@ -1,0 +1,47 @@
+<p>Welcome to the ADviCE Digital Health Application Finder</p>
+
+<form>
+
+<app-checkbox-hierarchy></app-checkbox-hierarchy>
+  <h2>Population</h2>
+  <div style="display: flex; flex-direction: row; column-gap: 4em;">
+    <div>
+      <h3>Age group</h3>
+      <app-age-group></app-age-group>
+    </div>
+    <div>
+      <h3>Sex</h3>
+      <app-assigned-sex></app-assigned-sex>
+    </div>
+    <div>
+      <h3>Target user</h3>
+      <app-role></app-role>
+    </div>
+  </div>
+  <h2>Outcomes to be influenced</h2>
+  <app-token-list serviceUrl="http://localhost:8080/outcomes" label="Desired outcomes" hintLabel="Add outcomes to constrain search to specific outcomes" hint="Type the name of an outcome..."></app-token-list>
+
+  <h2>Conditions, specialties and procedures</h2>
+  <div style="display: flex; flex-direction: column; row-gap: 2em;">
+    <app-token-list serviceUrl="http://localhost:8080/conditions" label="Conditions" hintLabel="Add conditions to constrain search to specific conditions" hint="Type the name of a condition..."></app-token-list>
+    <app-token-list serviceUrl="http://localhost:8080/specialties" label="Specialties" hintLabel="Add specialties to constrain search to particular specialties" [hint]="'Type the name of a specialty...'" [initialValues]="[]"></app-token-list>
+    <app-token-list serviceUrl="http://localhost:8080/procedures" label="Procedures" hintLabel="Add procedures to constrain search to specific procedures" [hint]="'Type the name of a procedure...'" [initialValues]="[]"></app-token-list>
+  </div>
+
+  <h2>Technology</h2>
+  <div style="display: flex; flex-direction: column;">
+    <app-token-list label="Technical features" hint="Add a technical feature..."></app-token-list>
+    <app-token-list label="Technology type" [hint]="'Add a technology type...'" [initialValues]="[]"></app-token-list>
+  </div>
+
+  <h2>Regulatory</h2>
+  <app-regulatory></app-regulatory>
+
+  <h2>EHR integration</h2>
+  <app-ehr-integration></app-ehr-integration>
+
+  <div style="margin-top: 2em;">
+  <button type="button" [routerLink]="'searchresults'" mat-flat-button color="primary">Search</button>
+  </div>
+</form>
+

@@ -1,0 +1,7 @@
+<div *ngIf="node" >
+  <mat-checkbox [indeterminate]="isIndeterminate()" (change)="updateChildren($event)" 
+                [(ngModel)]="node.checked">{{node.label}}</mat-checkbox>
+  <div style="margin-left: 3em;">
+    <app-checkbox-hierarchy (notify)="handleChildrenChanged()" *ngFor="let node of node.children" [node]="node"></app-checkbox-hierarchy>
+  </div>
+  </div>

@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+.toolbar {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.content {
+  flex-grow: 100;
+  margin: 1em;
+}

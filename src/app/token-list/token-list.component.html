@@ -1,0 +1,20 @@
+<mat-form-field class="token-list" appearance="fill" [hintLabel]="hintLabel">
+    <mat-label>{{label}}</mat-label>
+    <mat-chip-grid #chipGrid aria-label="label">
+      <mat-chip-row *ngFor="let selToken of selectedTokens" (removed)="remove(selToken)">
+        {{selToken}}
+        <button matChipRemove [attr.aria-label]="'remove ' + selToken">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+    </mat-chip-grid>
+    <input [placeholder]="hint" #tokenInput [formControl]="tokenCtrl"
+      [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)" type="search" autocomplete="off" name="notSearch"/>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let token of filteredTokens | async" [value]="token">
+        {{token}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>

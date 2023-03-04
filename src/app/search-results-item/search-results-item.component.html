@@ -1,0 +1,17 @@
+<div style="display: flex; flex-direction: row; column-gap: 0.5em;">
+<span style="flex-grow: 0;" ><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="dvr"></mat-icon>
+</span>
+<div class="application" style="flex-grow: 1;">
+  <div style="display: flex; align-items: center; column-gap: 0.5em;">
+    <span class="application-name">{{item.application_name}}</span> <span *ngIf="item.company">&nbsp;by {{item.company}}</span>
+  </div>
+  <div *ngIf="item.url" class="application-url">
+    <a [href]="item.url">{{item.url}}</a>
+  </div>
+  <div class="application-description">
+    <a *ngIf="item.application_description">{{item.application_description}}</a>
+    <span *ngIf="!item.url">{{item.application_name}}</span>
+  </div>
+</div>
+
+</div>
