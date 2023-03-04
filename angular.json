@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "experiment-1": {
+    "doves-ui": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/experiment-1",
+            "outputPath": "dist/doves-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "experiment-1:build:production"
+              "browserTarget": "doves-ui:build:production"
             },
             "development": {
-              "browserTarget": "experiment-1:build:development"
+              "browserTarget": "doves-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "experiment-1:build"
+            "browserTarget": "doves-ui:build"
           }
         },
         "test": {
