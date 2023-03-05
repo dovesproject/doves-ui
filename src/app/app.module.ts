@@ -27,6 +27,8 @@ import { SearchResultsItemComponent } from './search-results-item/search-results
 import { HttpClientModule} from '@angular/common/http';
 import { RoleComponent } from './role/role.component';
 import { CheckboxHierarchyComponent } from './checkbox-hierarchy/checkbox-hierarchy.component'
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { CheckboxHierarchyComponent } from './checkbox-hierarchy/checkbox-hierar
     ReactiveFormsModule,
     MatCheckboxModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

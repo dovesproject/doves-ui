@@ -1,8 +1,8 @@
 <mat-form-field class="token-list" appearance="fill" [hintLabel]="hintLabel">
     <mat-label>{{label}}</mat-label>
     <mat-chip-grid #chipGrid aria-label="label">
-      <mat-chip-row *ngFor="let selToken of selectedTokens" (removed)="remove(selToken)">
-        {{selToken}}
+      <mat-chip-row *ngFor="let selToken of selectedTokens" (removed)="remove(selToken)" [matTooltip]="selToken.definition">
+        {{selToken.label}}
         <button matChipRemove [attr.aria-label]="'remove ' + selToken">
           <mat-icon>cancel</mat-icon>
         </button>

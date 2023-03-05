@@ -33,7 +33,7 @@ export class TokenListComponent implements OnInit {
   
   filteredTokens: Observable<Term []>;
   
-  selectedTokens: string [] = [];
+  selectedTokens: Term [] = [];
 
   @ViewChild('tokenInput') tokenInput!: ElementRef<HTMLInputElement>;
 
@@ -44,7 +44,7 @@ export class TokenListComponent implements OnInit {
     );
   }
 
-  remove(token : string): void {
+  remove(token : Term): void {
     const index = this.selectedTokens.indexOf(token);
     if (index >= 0) {
       this.selectedTokens.splice(index, 1);
@@ -52,13 +52,12 @@ export class TokenListComponent implements OnInit {
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
-    this.selectedTokens.push(event.option.viewValue);
+    this.selectedTokens.push(event.option.value);
     this.tokenInput.nativeElement.value = '';
     this.tokenCtrl.setValue(null);
   }
 
   ngOnInit(): void {
-    this.selectedTokens = this.initialValues;
   }
 
 }
