@@ -1,5 +1,5 @@
 export interface Term {
-  name : string;
+  label : string;
   synonyms : string [];
   iri : string;
 }

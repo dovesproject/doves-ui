@@ -19,13 +19,13 @@
     </div>
   </div>
   <h2>Outcomes to be influenced</h2>
-  <app-token-list serviceUrl="http://localhost:8080/outcomes" label="Desired outcomes" hintLabel="Add outcomes to constrain search to specific outcomes" hint="Type the name of an outcome..."></app-token-list>
+  <app-token-list endPoint="/outcomes" label="Desired outcomes" hintLabel="Add outcomes to constrain search to specific outcomes" hint="Type the name of an outcome..."></app-token-list>
 
   <h2>Conditions, specialties and procedures</h2>
   <div style="display: flex; flex-direction: column; row-gap: 2em;">
-    <app-token-list serviceUrl="http://localhost:8080/conditions" label="Conditions" hintLabel="Add conditions to constrain search to specific conditions" hint="Type the name of a condition..."></app-token-list>
-    <app-token-list serviceUrl="http://localhost:8080/specialties" label="Specialties" hintLabel="Add specialties to constrain search to particular specialties" [hint]="'Type the name of a specialty...'" [initialValues]="[]"></app-token-list>
-    <app-token-list serviceUrl="http://localhost:8080/procedures" label="Procedures" hintLabel="Add procedures to constrain search to specific procedures" [hint]="'Type the name of a procedure...'" [initialValues]="[]"></app-token-list>
+    <app-token-list endPoint="http://localhost:8080/conditions" label="Conditions" hintLabel="Add conditions to constrain search to specific conditions" hint="Type the name of a condition..."></app-token-list>
+    <app-token-list endPoint="http://localhost:8080/specialties" label="Specialties" hintLabel="Add specialties to constrain search to particular specialties" [hint]="'Type the name of a specialty...'" [initialValues]="[]"></app-token-list>
+    <app-token-list endPoint="http://localhost:8080/procedures" label="Procedures" hintLabel="Add procedures to constrain search to specific procedures" [hint]="'Type the name of a procedure...'" [initialValues]="[]"></app-token-list>
   </div>
 
   <h2>Technology</h2>

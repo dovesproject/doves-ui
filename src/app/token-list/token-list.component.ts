@@ -4,7 +4,8 @@ import {FormControl} from '@angular/forms';
 import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
 import {MatChipInputEvent} from '@angular/material/chips';
 import {debounceTime, distinctUntilChanged, Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import {map, mergeMap, startWith} from 'rxjs/operators';
+import { Term } from '../term';
 import {TokenService} from "../token.service";
 
 @Component({
@@ -24,11 +25,11 @@ export class TokenListComponent implements OnInit {
 
   @Input() valueSource! : string;
 
-  @Input() serviceUrl : string = "";
+  @Input() endPoint : string = "";
 
   separatorKeysCodes: number[] = [ENTER, COMMA];
   tokenCtrl = new FormControl('');
-  filteredTokens: Observable<string[]>;
+  filteredTokens: Observable<Term []>;
   selectedTokens: string[] = [];
   allTokens: string[] = ["Apple", "Banana", "Orange", "Pear"];
 
@@ -37,7 +38,7 @@ export class TokenListComponent implements OnInit {
   constructor(private tokenService : TokenService ) {
     this.filteredTokens = this.tokenCtrl.valueChanges.pipe(
       startWith(null),
-      map((tok: string | null) => (tok ? this._filter(tok) : []))
+      mergeMap((tok: string | null) => (tok ? this.tokenService.getTokens(this.endPoint, tok) : new Observable<Term []>()))
     );
   }
 
@@ -69,10 +70,10 @@ export class TokenListComponent implements OnInit {
     this.tokenCtrl.setValue(null);
   }
 
-  private _filter(value: string): string[] {
-    console.log(value);
-    return this.tokenService.getTokens(this.serviceUrl, value);
-  }
+  // private _filter(value: string): string[] {
+  //   console.log(value);
+  //   return this.tokenService.getTokens(this.serviceUrl, value);
+  // }
 
   ngOnInit(): void {
     this.selectedTokens = this.initialValues;

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 import { specialties } from "./specialties";
 import { diseases } from "./diseases";
 import {Disease} from "./disease";
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {Condition} from "./condition";
+import { Term } from "./term";
 
 @Injectable({
   providedIn: 'root'
@@ -13,24 +13,26 @@ export class TokenService {
 
   constructor(private http: HttpClient) { }
 
-  getTokens(serviceUrl : string, query : string) : string [] {
-    if(serviceUrl.includes("conditions")) {
-//      const params = new HttpParams().append("query", query);
-//      let response = this.http.get<Condition []>("http://localhost:8080/conditions",
-//      {params : params})
-//      .forEach(match => );
-//      return diseases.filter(condition => this.isIncluded(disease, query)).map(disease => disease.name);
-      return diseases.filter((disease) => disease.name.startsWith(query)).map((disease) => disease.name);
-    }
-    else if(serviceUrl.includes("specialties")) {
-      return specialties.filter((specialty) => specialty.startsWith(query));
-    }
-    else if(serviceUrl.includes("procedures")) {
-      return ["Office visit", "Administer flu shot"];
-    }
-    else {
-      return [];
-    }
+  getTokens(endPoint : string, query : string) : Observable<Term []> {
+    // if(serviceUrl.includes("conditions")) {
+      // return diseases.filter((disease) => disease.name.startsWith(query)).map((disease) => disease.name);
+    // }
+    // else if(serviceUrl.includes("outcomes")) {
+     const params = new HttpParams().append("query", query);
+     let response = this.http.get<Term []>("http://localhost:8080" + endPoint, {params : params});
+     console.log(response);
+     return response;
+     
+    // }
+    // else if(serviceUrl.includes("specialties")) {
+    //   return specialties.filter((specialty) => specialty.startsWith(query));
+    // }
+    // else if(serviceUrl.includes("procedures")) {
+    //   return ["Office visit", "Administer flu shot"];
+    // }
+    // else {
+    //   return [];
+    // }
   }
 
   isIncluded(disease : Disease, query: string) : boolean {
