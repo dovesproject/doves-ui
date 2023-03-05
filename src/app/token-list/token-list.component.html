@@ -11,7 +11,7 @@
     <input [placeholder]="hint" #tokenInput [formControl]="tokenCtrl"
       [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-      (matChipInputTokenEnd)="add($event)" type="search" autocomplete="off" name="notSearch"/>
+      type="search" autocomplete="off" name="notSearch"/>
     <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
       <mat-option *ngFor="let token of filteredTokens | async" [value]="token">
         {{token.label}} <span style="color: #a0a0a0;" *ngIf="token.synonyms.length > 0">(<span *ngFor="let syn of token.synonyms; let isLast=last">{{syn}}{{isLast ? '' : ', '}}</span>)</span>

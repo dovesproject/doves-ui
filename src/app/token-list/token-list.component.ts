@@ -28,10 +28,12 @@ export class TokenListComponent implements OnInit {
   @Input() endPoint : string = "";
 
   separatorKeysCodes: number[] = [ENTER, COMMA];
+
   tokenCtrl = new FormControl('');
+  
   filteredTokens: Observable<Term []>;
-  selectedTokens: string[] = [];
-  allTokens: string[] = ["Apple", "Banana", "Orange", "Pear"];
+  
+  selectedTokens: string [] = [];
 
   @ViewChild('tokenInput') tokenInput!: ElementRef<HTMLInputElement>;
 
@@ -42,23 +44,8 @@ export class TokenListComponent implements OnInit {
     );
   }
 
-  add(event: MatChipInputEvent): void {
-    const value = (event.value || '').trim();
-
-    // Add our fruit
-    if (value) {
-      this.selectedTokens.push(value);
-    }
-
-    // Clear the input value
-    event.chipInput!.clear();
-
-    this.tokenCtrl.setValue(null);
-  }
-
-  remove(fruit: string): void {
-    const index = this.selectedTokens.indexOf(fruit);
-
+  remove(token : string): void {
+    const index = this.selectedTokens.indexOf(token);
     if (index >= 0) {
       this.selectedTokens.splice(index, 1);
     }
@@ -70,15 +57,8 @@ export class TokenListComponent implements OnInit {
     this.tokenCtrl.setValue(null);
   }
 
-  // private _filter(value: string): string[] {
-  //   console.log(value);
-  //   return this.tokenService.getTokens(this.serviceUrl, value);
-  // }
-
   ngOnInit(): void {
     this.selectedTokens = this.initialValues;
-
-
   }
 
 }
