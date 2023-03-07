@@ -23,15 +23,15 @@
 
   <h2>Conditions, specialties and procedures</h2>
   <div style="display: flex; flex-direction: column; row-gap: 2em;">
-    <app-token-list endPoint="http://localhost:8080/conditions" label="Conditions" hintLabel="Add conditions to constrain search to specific conditions" hint="Type the name of a condition..."></app-token-list>
-    <app-token-list endPoint="http://localhost:8080/specialties" label="Specialties" hintLabel="Add specialties to constrain search to particular specialties" [hint]="'Type the name of a specialty...'" [initialValues]="[]"></app-token-list>
-    <app-token-list endPoint="http://localhost:8080/procedures" label="Procedures" hintLabel="Add procedures to constrain search to specific procedures" [hint]="'Type the name of a procedure...'" [initialValues]="[]"></app-token-list>
+    <app-token-list endPoint="/conditions" label="Conditions" hintLabel="Add conditions to constrain search to specific conditions" hint="Type the name of a condition..."></app-token-list>
+    <app-token-list endPoint="/specialties" label="Specialties" hintLabel="Add specialties to constrain search to particular specialties" [hint]="'Type the name of a specialty...'" [initialValues]="[]"></app-token-list>
+    <app-token-list endPoint="/procedures" label="Procedures" hintLabel="Add procedures to constrain search to specific procedures" [hint]="'Type the name of a procedure...'" [initialValues]="[]"></app-token-list>
   </div>
 
   <h2>Technology</h2>
   <div style="display: flex; flex-direction: column;">
-    <app-token-list label="Technical features" hint="Add a technical feature..."></app-token-list>
-    <app-token-list label="Technology type" [hint]="'Add a technology type...'" [initialValues]="[]"></app-token-list>
+    <app-token-list endPoint="/technical-features" label="Technical features" hint="Add a technical feature..."></app-token-list>
+    <app-token-list endPoint="/technology-types" label="Technology type" [hint]="'Add a technology type...'" [initialValues]="[]"></app-token-list>
   </div>
 
   <h2>Regulatory</h2>
