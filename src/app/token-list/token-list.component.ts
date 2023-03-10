@@ -33,7 +33,7 @@ export class TokenListComponent implements OnInit {
   
   filteredTokens: Observable<Term []>;
   
-  selectedTokens: Term [] = [];
+  @Input() selectedTokens: Term [] = [];
 
   @ViewChild('tokenInput') tokenInput!: ElementRef<HTMLInputElement>;
 

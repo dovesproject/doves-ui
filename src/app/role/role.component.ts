@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CheckBoxHierarchyNode } from '../checkbox-hierarchy-node';
+import { CheckableHierarchyNode } from '../checkable-hierarchy-node';
 
 @Component({
   selector: 'app-role',
@@ -8,49 +8,49 @@ import { CheckBoxHierarchyNode } from '../checkbox-hierarchy-node';
 })
 export class RoleComponent {
 
-  roleNode : CheckBoxHierarchyNode = {
+  roleNode : CheckableHierarchyNode = {
   
-    id: "anyRole",
+    iri: "anyRole",
     label: "Any",
     checked: true,
     children: [{
-      id: "administrator",
+      iri: "administrator",
       label: "Administrator",
       checked: true,
       children: []
     }, {
-      id: "clinician",
+      iri: "clinician",
       label: "Clinician",
       checked: true,
       children: [{
-        id: "pyshicianAssistant",
+        iri: "pyshicianAssistant",
         label: "Physician assistant",
         checked: true,
         children: []
       },  {
-        id: "physician",
+        iri: "physician",
         label: "Physician",
         checked: true,
         children: []
       }, {
-        id: "nurse",
+        iri: "nurse",
         label: "Nurse",
         checked: true,
         children: []
       }, {
-        id: "medicalAssistant",
+        iri: "medicalAssistant",
         label: "Medical assistant",
         checked: true,
         children: []
       }]
     }, {
-      id: "family",
+      iri: "family",
       label: "Family",
       checked: true,
       children: []
     },  {
-      id: "caregiver",
-      label: "Care giver",
+      iri: "caregiver",
+      label: "Caregiver",
       checked: true,
       children: []
     }]

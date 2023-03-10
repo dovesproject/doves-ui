@@ -1,4 +1,7 @@
 <div class="results-list">
+  <div>
+    Displaying {{itemCount}} results
+  </div>
   <div *ngFor="let item of items">
     <app-search-results-item  [item]="item"></app-search-results-item>
   </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CheckableHierarchyNode } from '../checkable-hierarchy-node'
 
 @Component({
   selector: 'app-assigned-sex',
@@ -7,7 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AssignedSexComponent {
 
-  female : boolean = true;
-
-  male : boolean = true;
+  assignedSexNode : CheckableHierarchyNode = {
+    iri: "anySex",
+    label: "Filter by patient assigned sex",
+    checked: false,
+    style : "font-weight: bold;",
+    children: [{
+      iri: "femaleSex",
+      label: "Female",
+      checked: false,
+      children: []
+    }, {
+      iri: "maleSex",
+      label: "Female",
+      checked: false,
+      children: []
+    }
+    ]};
 }

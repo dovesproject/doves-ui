@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {CheckBoxHierarchyNode, setChildrenChecked, isIndeterminate} from "../checkbox-hierarchy-node";
+import {CheckableHierarchyNode, setChildrenChecked, isIndeterminate} from "../checkable-hierarchy-node";
 import {MatCheckboxChange} from "@angular/material/checkbox";
 
 @Component({
@@ -13,40 +13,7 @@ export class CheckboxHierarchyComponent {
   notify = new EventEmitter();
 
   @Input("node")
-  node : CheckBoxHierarchyNode | undefined;
-  // {
-  //   id : "A",
-  //   label : "Hello A",
-  //   checked : false,
-  //   children : [{
-  //     id : "B",
-  //     label : "Hello B",
-  //     checked : false,
-  //     children : [{
-  //       id: "C",
-  //       label: "Hello C",
-  //       checked : false,
-  //       children : []
-  //     },
-  //     {
-  //       id: "C2",
-  //       label: "Hello C2",
-  //       checked : false,
-  //       children : [{
-  //         id: "D",
-  //       label: "Hello D",
-  //       checked : false,
-  //       children : []
-  //     }]
-  //     }]
-  //   },
-  //   {
-  //     id : "B1",
-  //     label : "Hello B1",
-  //     checked : false,
-  //     children : []
-  // }]
-  // };
+  node : CheckableHierarchyNode | undefined;
 
   handleChildrenChanged() {
     if(this.node === undefined) {

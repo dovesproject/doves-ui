@@ -28,6 +28,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { RoleComponent } from './role/role.component';
 import { CheckboxHierarchyComponent } from './checkbox-hierarchy/checkbox-hierarchy.component'
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatRadioModule } from '@angular/material/radio'
 
 
 @NgModule({
@@ -61,7 +62,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatCheckboxModule,
     FormsModule,
     HttpClientModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSlideToggleModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

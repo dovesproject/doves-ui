@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {SearchResultItem} from "../search-result-item";
+import {DigitalHealthApplication} from "../digital-health-application";
 
 @Component({
   selector: 'app-search-results-item',
@@ -7,5 +7,5 @@ import {SearchResultItem} from "../search-result-item";
   styleUrls: ['./search-results-item.component.css']
 })
 export class SearchResultsItemComponent {
-  @Input() item! : SearchResultItem;
+  @Input() item! : DigitalHealthApplication;
 }
