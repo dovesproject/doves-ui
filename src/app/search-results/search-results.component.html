@@ -1,4 +1,10 @@
-<div class="results-list">
+<div  *ngIf="!resultsLoaded">
+  <p>
+    Searching for applications...</p>
+  <mat-spinner>Searching for apps</mat-spinner>
+</div>
+
+<div class="results-list" *ngIf="resultsLoaded">
   <div>
     Displaying {{itemCount}} results
   </div>

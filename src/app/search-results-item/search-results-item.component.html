@@ -12,6 +12,9 @@
     <a *ngIf="item.applicationDescription">{{item.applicationDescription}}</a>
     <span *ngIf="!item.url">{{item.applicationName}}</span>
   </div>
+  <div style="margin-top: 2em;">
+    <button type="button" (click)="explainResult()" mat-flat-button color="primary">Explain</button>
+  </div>
 </div>
 
 </div>

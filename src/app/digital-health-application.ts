@@ -1,5 +1,7 @@
 export interface DigitalHealthApplication {
 
+  id : string;
+
   applicationName : string | null;
 
   company : string,
