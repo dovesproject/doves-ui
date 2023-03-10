@@ -6,10 +6,8 @@
     <div>
       <h3>Patient age group</h3>
       <div *ngIf="searchSpecification">
-        <!-- <app-checkbox-hierarchy [node]="ageGroupNode"></app-checkbox-hierarchy> -->
         <app-age-group [ageGroupNode]="searchSpecification.ageGroupNode"></app-age-group>
       </div>
-      <!-- <app-age-group [ageGroupNode]="ageGroupNode"></app-age-group> -->
     </div>
     <div>
       <h3>Patient sex</h3>
@@ -17,7 +15,9 @@
     </div>
     <div>
       <h3>App user</h3>
-      <app-role></app-role>  
+      <div *ngIf="searchSpecification">
+        <app-app-user [appUserNode]="searchSpecification.appUserNode"></app-app-user>  
+      </div>
     </div>
   </div>
 

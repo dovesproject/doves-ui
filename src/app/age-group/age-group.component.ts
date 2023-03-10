@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ageGroups } from "./age-group";
-import {MatCheckboxChange} from "@angular/material/checkbox";
 import { CheckableHierarchyNode } from '../checkable-hierarchy-node';
 import { Input } from '@angular/core'
 

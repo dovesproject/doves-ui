@@ -29,6 +29,7 @@ import { RoleComponent } from './role/role.component';
 import { CheckboxHierarchyComponent } from './checkbox-hierarchy/checkbox-hierarchy.component'
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRadioModule } from '@angular/material/radio'
+import { AppUserComponent } from './app-user/app-user.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { MatRadioModule } from '@angular/material/radio'
     SearchResultsComponent,
     SearchResultsItemComponent,
     RoleComponent,
-    CheckboxHierarchyComponent
+    CheckboxHierarchyComponent,
+    AppUserComponent
   ],
   imports: [
     BrowserModule,

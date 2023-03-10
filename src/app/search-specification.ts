@@ -17,6 +17,7 @@ export interface SearchSpecification {
 
     fdaCleared : boolean,
 
-    ageGroupNode : CheckableHierarchyNode
+    ageGroupNode : CheckableHierarchyNode,
 
+    appUserNode : CheckableHierarchyNode
 }

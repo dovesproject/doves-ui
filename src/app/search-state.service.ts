@@ -44,6 +44,54 @@ export class SearchStateService {
     }]
   }
 
+  defaultApplicationUserNode : CheckableHierarchyNode = {
+  
+    iri: "anyRole",
+    label: "Any",
+    checked: true,
+    children: [{
+      iri: "administrator",
+      label: "Administrator",
+      checked: true,
+      children: []
+    }, {
+      iri: "clinician",
+      label: "Clinician",
+      checked: true,
+      children: [{
+        iri: "pyshicianAssistant",
+        label: "Physician assistant",
+        checked: true,
+        children: []
+      },  {
+        iri: "physician",
+        label: "Physician",
+        checked: true,
+        children: []
+      }, {
+        iri: "nurse",
+        label: "Nurse",
+        checked: true,
+        children: []
+      }, {
+        iri: "medicalAssistant",
+        label: "Medical assistant",
+        checked: true,
+        children: []
+      }]
+    }, {
+      iri: "family",
+      label: "Family",
+      checked: true,
+      children: []
+    },  {
+      iri: "caregiver",
+      label: "Caregiver",
+      checked: true,
+      children: []
+    }]
+  };
+
   private searchSpecification : SearchSpecification = {
     conditions: [],
     outcomes: [],
@@ -52,7 +100,8 @@ export class SearchStateService {
     technicalFeatures: [],
     fdaApproved: false,
     fdaCleared: false,
-    ageGroupNode: this.defaultAgeGroupNode
+    ageGroupNode: this.defaultAgeGroupNode,
+    appUserNode : this.defaultApplicationUserNode
 }
 
   constructor() { }
