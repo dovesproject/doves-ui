@@ -19,5 +19,7 @@ export interface SearchSpecification {
 
     ageGroupNode : CheckableHierarchyNode,
 
-    appUserNode : CheckableHierarchyNode
+    appUserNode : CheckableHierarchyNode,
+
+    assignedSexNode : CheckableHierarchyNode
 }
