@@ -46,7 +46,7 @@ export class SearchStateService {
 
   defaultApplicationUserNode : CheckableHierarchyNode = {
   
-    iri: "anyRole",
+    iri: "https://purl.org/doves/38552094-2ddf-4e81-b33d-080f5b904cd7",
     label: "Any",
     checked: true,
     children: [{
@@ -79,6 +79,11 @@ export class SearchStateService {
         checked: true,
         children: []
       }]
+    }, {
+        iri: "https://purl.org/doves/b129abd1-3d08-42e9-b1b3-7ed9f235fe93",
+        label: "Patient",
+        checked: true,
+        children: []
     }, {
       iri: "https://purl.org/doves/ecb2896b-027f-4dbb-b63c-d0a230014bb2",
       label: "Family",
