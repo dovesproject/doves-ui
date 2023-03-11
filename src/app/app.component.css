@@ -1,12 +1,18 @@
 .app {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .toolbar {
   flex-grow: 0;
   flex-shrink: 0;
 }
 .content {
+  overflow: scroll;
   flex-grow: 100;
   margin: 1em;
 }
