@@ -2,4 +2,11 @@
   display: flex;
   flex-direction: column;
   row-gap: 2em;
+  margin: 1em;
+}
+
+.progress-spinner {
+  margin: 1em;
+  font-size: larger;
+  color: #909090;
 }

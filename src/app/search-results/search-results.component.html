@@ -1,7 +1,7 @@
-<div  *ngIf="!resultsLoaded">
+<div class="progress-spinner"  *ngIf="!resultsLoaded">
   <p>
     Searching for applications...</p>
-  <mat-spinner>Searching for apps</mat-spinner>
+  <mat-spinner [diameter]="40">Searching for apps</mat-spinner>
 </div>
 
 <div class="results-list" *ngIf="resultsLoaded">
