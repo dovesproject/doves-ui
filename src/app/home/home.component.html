@@ -37,12 +37,16 @@
     <app-token-list [selectedTokens]="searchSpecification.technologies" endPoint="/api/technologies" label="Technology type" [hint]="'Add a technology type...'" [initialValues]="[]"></app-token-list>
   </div>
 
-  <h2>Regulatory</h2>
+  <div style="display: flex; flex-direction: row; column-gap: 4em;">
+
+<div>  <h2>Regulatory</h2>
   <app-regulatory  [fdaCleared]="searchSpecification.fdaCleared"
                    [fdaApproved]="searchSpecification.fdaApproved"></app-regulatory>
-
-  <h2>EHR integration</h2>
+</div>
+<div>  <h2>EHR integration</h2>
   <app-ehr-integration></app-ehr-integration>
+</div>
+  </div>
 
   <div style="margin-top: 2em;">
   <button type="button" (click)="performSearch()" mat-flat-button color="primary">Search</button>
