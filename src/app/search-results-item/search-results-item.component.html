@@ -19,11 +19,7 @@
       <mat-spinner [diameter]="25"></mat-spinner>
     </div>
     <div *ngIf="explanation.length > 0">
-      <div *ngFor="let expl of explanation">
-        <pre>
-          {{expl.axioms | json}}
-        </pre>
-      </div>
+      <app-explanations [explanations]="explanation"></app-explanations>
     </div>
   </div>
 

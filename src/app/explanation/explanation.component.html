@@ -1,5 +1,6 @@
 <div *ngIf="explanation">
-    <div *ngFor="let axiom of explanation.axioms">
-        <div>{{axiom}}</div>
-    </div>
+    <p style="padding-bottom: 0.2em; border-bottom: 1px solid #c0c0c0;">Explanation for <span style="font-weight: bold;">{{explanation.entailment}}</span></p>
+    <ul *ngFor="let axiom of explanation.axioms">
+        <li style="margin-bottom: 0.4em;">{{axiom}}</li>
+    </ul>
 </div>
