@@ -17,6 +17,6 @@ export class ExplanationService {
       searchSpecification : searchSpecification,
       applicationId : applicationId
     }
-    return this.http.post<Explanation []>("http://localhost:8080/explain", req);
+    return this.http.post<Explanation []>("/api/explain", req);
   }
 }

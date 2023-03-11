@@ -22,19 +22,19 @@
   </div>
 
   <h2>Outcomes to be influenced</h2>
-  <app-token-list [selectedTokens]="searchSpecification.outcomes" endPoint="/outcomes" label="Desired outcomes" hintLabel="Add outcomes to constrain search to specific outcomes" hint="Type the name of an outcome..."></app-token-list>
+  <app-token-list [selectedTokens]="searchSpecification.outcomes" endPoint="/api/outcomes" label="Desired outcomes" hintLabel="Add outcomes to constrain search to specific outcomes" hint="Type the name of an outcome..."></app-token-list>
 
   <h2>Conditions, specialties and procedures</h2>
   <div style="display: flex; flex-direction: column; row-gap: 2em;">
-    <app-token-list [selectedTokens]="searchSpecification.conditions" endPoint="/conditions" label="Conditions" hintLabel="Add conditions to constrain search to specific conditions" hint="Type the name of a condition..."></app-token-list>
-    <app-token-list [selectedTokens]="searchSpecification.specialties" endPoint="/specialties" label="Specialties" hintLabel="Add specialties to constrain search to particular specialties" [hint]="'Type the name of a specialty...'" [initialValues]="[]"></app-token-list>
-    <app-token-list endPoint="/procedures" label="Procedures" hintLabel="Add procedures to constrain search to specific procedures" [hint]="'Type the name of a procedure...'" [initialValues]="[]"></app-token-list>
+    <app-token-list [selectedTokens]="searchSpecification.conditions" endPoint="/api/conditions" label="Conditions" hintLabel="Add conditions to constrain search to specific conditions" hint="Type the name of a condition..."></app-token-list>
+    <app-token-list [selectedTokens]="searchSpecification.specialties" endPoint="/api/specialties" label="Specialties" hintLabel="Add specialties to constrain search to particular specialties" [hint]="'Type the name of a specialty...'" [initialValues]="[]"></app-token-list>
+    <app-token-list endPoint="/api/procedures" label="Procedures" hintLabel="Add procedures to constrain search to specific procedures" [hint]="'Type the name of a procedure...'" [initialValues]="[]"></app-token-list>
   </div>
 
   <h2>Technology</h2>
   <div style="display: flex; flex-direction: column;">
-    <app-token-list [selectedTokens]="searchSpecification.technicalFeatures" endPoint="/technical-features" label="Technical features" hint="Add a technical feature..."></app-token-list>
-    <app-token-list [selectedTokens]="searchSpecification.technologies" endPoint="/technologies" label="Technology type" [hint]="'Add a technology type...'" [initialValues]="[]"></app-token-list>
+    <app-token-list [selectedTokens]="searchSpecification.technicalFeatures" endPoint="/api/technical-features" label="Technical features" hint="Add a technical feature..."></app-token-list>
+    <app-token-list [selectedTokens]="searchSpecification.technologies" endPoint="/api/technologies" label="Technology type" [hint]="'Add a technology type...'" [initialValues]="[]"></app-token-list>
   </div>
 
   <h2>Regulatory</h2>
@@ -48,6 +48,6 @@
   <button type="button" (click)="performSearch()" mat-flat-button color="primary">Search</button>
   </div>
 
-  <pre>
+  <!-- <pre>
     {{searchSpecification | json}}
-  </pre>
+  </pre> -->

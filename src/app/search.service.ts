@@ -11,6 +11,6 @@ export class SearchService {
   constructor(private http : HttpClient) { }
 
   performSearch(searchSpecification: SearchSpecification) : Observable<SearchResult> {
-    return this.http.post<SearchResult>("http://localhost:8080/search", searchSpecification);
+    return this.http.post<SearchResult>("/api/search", searchSpecification);
   }
 }

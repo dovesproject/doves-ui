@@ -15,7 +15,9 @@ export class TokenService {
 
   getTokens(endPoint : string, query : string) : Observable<Term []> {
     const params = new HttpParams().append("query", query);
-    let response = this.http.get<Term []>("http://localhost:8080" + endPoint, {params : params});
+    var prefix =  window.location.protocol + "//" + window.location.hostname + ":8080";
+    console.log(prefix);
+    let response = this.http.get<Term []>(endPoint, {params : params});
     return response;
   }
 

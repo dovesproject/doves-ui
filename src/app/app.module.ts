@@ -30,7 +30,10 @@ import { CheckboxHierarchyComponent } from './checkbox-hierarchy/checkbox-hierar
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRadioModule } from '@angular/material/radio'
 import { AppUserComponent } from './app-user/app-user.component';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ExplanationComponent } from './explanation/explanation.component';
+import { ExplanationsComponent } from './explanations/explanations.component'
+import { MatDialogModule } from '@angular/material/dialog'
 
 
 @NgModule({
@@ -48,6 +51,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     RoleComponent,
     CheckboxHierarchyComponent,
     AppUserComponent,
+    ExplanationComponent,
+    ExplanationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     MatTooltipModule,
     MatSlideToggleModule,
     MatRadioModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
