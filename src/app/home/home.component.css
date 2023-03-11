@@ -1,4 +1,22 @@
-section {
+.home-container {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.search-spec {
+  flex-grow: 100;
+  overflow: scroll;
+  margin-left: 1em;
+}
+
+.bottom-bar {
+  padding: 1em;
+  border-top: 1px solid #c0c0c0;
+  flex-grow: 0;
+  flex-shrink: 0;
+
 }

@@ -14,5 +14,5 @@
 .content {
   overflow: scroll;
   flex-grow: 100;
-  margin: 1em;
+  position: relative;
 }
