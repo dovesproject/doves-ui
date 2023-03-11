@@ -48,51 +48,51 @@ export class SearchStateService {
   
     iri: "https://purl.org/doves/38552094-2ddf-4e81-b33d-080f5b904cd7",
     label: "Any",
-    checked: true,
+    checked: false,
     children: [{
       iri: "https://purl.org/doves/da5b1476-bbe6-4a2a-8267-886475bcc6f4",
       label: "Administrator",
-      checked: true,
+      checked: false,
       children: []
     }, {
       iri: "https://purl.org/doves/13c1b5fc-1104-44fe-9975-74c60a26595f",
       label: "Clinician",
-      checked: true,
+      checked: false,
       children: [{
         iri: "https://purl.org/doves/657b9d62-19a9-4e32-a7d3-677a72ee4a6e",
         label: "Physician assistant",
-        checked: true,
+        checked: false,
         children: []
       },  {
         iri: "https://purl.org/doves/37a002b3-8eec-4341-b3d0-6ccb97d8e42d",
         label: "Physician",
-        checked: true,
+        checked: false,
         children: []
       }, {
         iri: "https://purl.org/doves/29dcd95d-567e-485e-84af-7fb536fa08a4",
         label: "Nurse",
-        checked: true,
+        checked: false,
         children: []
       }, {
         iri: "https://purl.org/doves/f36e2870-61e7-4b51-abcd-8752df25ea68",
         label: "Medical assistant",
-        checked: true,
+        checked: false,
         children: []
       }]
     }, {
         iri: "https://purl.org/doves/b129abd1-3d08-42e9-b1b3-7ed9f235fe93",
         label: "Patient",
-        checked: true,
+        checked: false,
         children: []
     }, {
       iri: "https://purl.org/doves/ecb2896b-027f-4dbb-b63c-d0a230014bb2",
       label: "Family",
-      checked: true,
+      checked: false,
       children: []
     },  {
       iri: "https://purl.org/doves/4df28317-0241-45a9-b39a-69ef066fd4d5",
       label: "Caregiver",
-      checked: true,
+      checked: false,
       children: []
     }]
   };

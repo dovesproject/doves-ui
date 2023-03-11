@@ -1,3 +1,5 @@
+import { Term } from "./term";
+
 export interface DigitalHealthApplication {
 
   id : string;
@@ -11,5 +13,11 @@ export interface DigitalHealthApplication {
   url : string | null,
 
   applicationDescription: string | null;
+
+  outcomes : Term [],
+  
+  conditions : Term [],
+
+  users : Term []
 
 }

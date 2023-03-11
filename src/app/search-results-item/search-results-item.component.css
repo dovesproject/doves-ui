@@ -12,3 +12,28 @@
 .application-description {
   color: #505050;
 }
+
+.badge-list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+  row-gap: 0.4em;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 0.2em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  border-radius:4px;
+  cursor: default;
+}
+
+.badge--condition {
+  background-color: rgb(240, 162, 19);
+  color: white;
+}
+.badge--outcome {
+  background-color: rgb(142, 35, 200);
+  color: white;
+}

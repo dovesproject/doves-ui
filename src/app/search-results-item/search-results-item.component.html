@@ -12,6 +12,16 @@
     <a *ngIf="item.applicationDescription">{{item.applicationDescription}}</a>
     <span *ngIf="!item.url">{{item.applicationName}}</span>
   </div>
+  <div class="badge-list">
+      <span *ngFor="let condition of item.conditions" class="badge badge--condition" [matTooltip]="condition.definition">
+        {{condition.label | titlecase}}
+      </span>
+  </div>
+  <div class="badge-list" *ngIf="item.outcomes.length > 0">
+    <span *ngFor="let outcome of item.outcomes" class="badge badge--outcome" [matTooltip]="outcome.definition">
+      {{outcome.label | titlecase}}
+    </span>
+</div>
   <div style="margin-top: 2em;">
     <button *ngIf="explanation.length === 0 && !computingExplanation" type="button" (click)="explainResult()" mat-flat-button color="primary">Explain</button>
     <div *ngIf="computingExplanation" style="display: flex; flex-direction: row; align-items: baseline;">
