@@ -28,7 +28,7 @@
       <span style="margin-right: 1em;">Computing explanation...</span>
       <mat-spinner [diameter]="25"></mat-spinner>
     </div>
-    <div *ngIf="explanation.length > 0">
+    <div *ngIf="explanation.length > 0" style="display: flex; flex-direction: row; align-items: end;">
       <app-explanations [explanations]="explanation"></app-explanations>
     </div>
   </div>

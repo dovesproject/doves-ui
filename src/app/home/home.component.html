@@ -2,7 +2,7 @@
   <div class="search-spec">
     <app-checkbox-hierarchy></app-checkbox-hierarchy>
     <h2>Population</h2>
-    <div style="display: flex; flex-direction: row; column-gap: 4em;">
+    <div style="display: flex; flex-direction: row; column-gap: 4em; flex-wrap: wrap;">
       <div>
         <h3>Patient age group</h3>
         <div *ngIf="searchSpecification">
@@ -47,7 +47,7 @@
         label="Technology type" [hint]="'Add a technology type...'" [initialValues]="[]"></app-token-list>
     </div>
 
-    <div style="display: flex; flex-direction: row; column-gap: 4em;">
+    <div style="display: flex; flex-direction: row; column-gap: 4em; flex-wrap: wrap;">
 
       <div>
         <h2>Regulatory</h2>
